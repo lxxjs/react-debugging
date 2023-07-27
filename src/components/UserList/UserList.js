@@ -1,15 +1,15 @@
+import UserItem from "./UserItem.js";
+
 import "./UserList.css";
 
 const UserList = (props) => {
   return (
     <div className="userlist">
-      <ui>
-        {props.users.map((user) => (
-          <li key={user.id}>
-            {user.username} ({user.age} years old)
-          </li>
+      <ul>
+        {props.users.map((user, mykey) => (
+          <UserItem key={mykey} username={user.username} age={user.age} />
         ))}
-      </ui>
+      </ul>
     </div>
   );
 };
