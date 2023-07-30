@@ -1,16 +1,17 @@
 import UserItem from "./UserItem.js";
-
-import "./UserList.css";
+import Card from "../UI/Card/Card.js";
 
 const UserList = (props) => {
   return (
-    <div className="userlist">
-      <ul>
-        {props.users.map((user, mykey) => (
-          <UserItem key={mykey} username={user.username} age={user.age} />
-        ))}
-      </ul>
-    </div>
+    <Card>
+      <div className="userlist">
+        <ul>
+          {props.users.map((user, mykey) => (
+            <UserItem key={mykey} username={user.username} age={user.age} />
+          ))}
+        </ul>
+      </div>
+    </Card>
   );
 };
 
