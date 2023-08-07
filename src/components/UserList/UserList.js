@@ -1,13 +1,14 @@
-import UserItem from "./UserItem.js";
-import Card from "../UI/Card/Card.js";
+import Card from "../UI/Card";
 
 const UserList = (props) => {
   return (
     <Card>
       <div className="userlist">
         <ul>
-          {props.users.map((user, mykey) => (
-            <UserItem key={mykey} username={user.username} age={user.age} />
+          {props.users.map((user) => (
+            <li key={user.id}>
+              {user.username} ({user.age} years old)
+            </li>
           ))}
         </ul>
       </div>

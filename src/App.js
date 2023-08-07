@@ -18,6 +18,7 @@ const DUMMY_USERS = [
 
 function App() {
   const [users, setUsers] = useState(DUMMY_USERS);
+
   const addUserHandler = (newUser) => {
     setUsers((prevUsers) => {
       return [newUser, ...prevUsers];
@@ -26,8 +27,8 @@ function App() {
 
   return (
     <div>
-      <UserInput onAddUser={addUserHandler} />;
-      <UserList users={users} />;
+      <UserInput onAddUser={addUserHandler} />
+      <UserList users={users} />
     </div>
   );
 }
